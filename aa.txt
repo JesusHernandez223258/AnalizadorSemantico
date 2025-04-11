@@ -1,0 +1,46 @@
+
+// --- Ejemplo Básico ---
+var saludo = "Hola";
+var publico = "Mundo";
+print(saludo + " " + publico + "!"); // Concatenación
+
+var a = 10;
+var b = 20.5;
+print("La suma de a y b es:", a + b); // Suma numérica
+print("La resta es:", a - 5);
+
+var activo = true;
+var contador = 0;
+
+// --- Estructuras de Control ---
+if (a > 5) {
+  print("a es mayor que 5");
+  var dentro_if = "visible aqui";
+  print(dentro_if);
+} else {
+  print("a no es mayor que 5");
+}
+
+// print(dentro_if); // Error Semántico: dentro_if no está declarado en este scope
+
+print("--- Bucle While ---");
+while (contador < 3) {
+  print("Iteración while:", contador);
+  //activo = contador; // Ejemplo de cambio de tipo (permitido)
+  contador = contador + 1;
+}
+
+print("Valor final contador:", contador);
+print("Tipo de activo:", activo); // Debería ser boolean
+
+// print(i); // Error Semántico: i no está declarado aquí (si usamos var)
+// print(j); // Error Semántico: j no está declarado aquí
+
+// --- Ejemplo de Error Semántico ---
+// print(variable_inexistente);
+// var a = 50; // Error: 'a' ya declarada en este scope (global)
+// activo = "apagado"; // Asignación válida, cambia el tipo
+// print("Tipo cambiado:", activo);
+// print(activo + 5); // Error semántico: '+' inválido entre string y number (en nuestra implementación)
+
+
